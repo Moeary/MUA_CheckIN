@@ -3,6 +3,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+import sys
+
+# 设置默认编码为utf-8
+sys.stdout.reconfigure(encoding='utf-8')
 
 # 启动浏览器
 driver = uc.Chrome()
@@ -17,7 +21,7 @@ try:
     # 设置cookie
     cookies = [
         {'name': 'locale', 'value': 'zh_CN'},
-        {'name': 'XSRF-TOKEN', 'value': 'eyJpdiI6IjIS0ZWUHZZN1lZR0pBUDluazNvVkE9PSIsInZHVlIjoiam9rcVZRQjRXd3hNd3BzSTVsc1lBYlRqak5WRjRpWnl3clJWZDd0MVdVVjVXcys1N2cvR1czejUxclg1RWtEV3dZQ0xjNHFsc2E2em1SRnlrMnZLZnhFUVprYnVHdU5Za1FIWUxzVDNManE3SGV4aGNCZ2NxVXdJY2FoTUxtek4iLCJtYWMiOiIzODFjMWVmMWFmYzMzNDQ4NzRiNzhhMWNlNDIzYTA4OTY1MzVlOWYzOTYxZDVjYTRmMDEwYTJlNDdlY2M5YjA1IiwidGFnIjoiIn0%3D'},
+        {'name': 'XSRF-TOKEN', 'value': 'eypdiI6IjIS0ZWUHZZN1lZR0pBUDluazNvVkE9PSIsInZHVlIjoiam9rcVZRQjRXd3hNd3BzSTVsc1lBYlRqak5WRjRpWnl3clJWZDd0MVdVVjVXcys1N2cvR1czejUxclg1RWtEV3dZQ0xjNHFsc2E2em1SRnlrMnZLZnhFUVprYnVHdU5Za1FIWUxzVDNManE3SGV4aGNCZ2NxVXdJY2FoTUxtek4iLCJtYWMiOiIzODFjMWVmMWFmYzMzNDQ4NzRiNzhhMWNlNDIzYTA4OTY1MzVlOWYzOTYxZDVjYTRmMDEwYTJlNDdlY2M5YjA1IiwidGFnIjoiIn0%3D'},
         {'name': 'BS_SESSION', 'value': 'eyJpdiI6IlVibFFYRjRCYkczcjQzL2JaS2xYanc9PSIsInZhbHVlIjoiNUpvVFpIWFhhb2c5S1FwTE53bUxyOXpHbnUvSDBkdWVrK1pncE1GM1c3K1ZPVXBDd29oaVpPMG1QSmVqbE9RZ2RhaFl0bDB2YjNUMWtFR2RRQXBQV2FwZ3IzdWxhYmhTME12QWFxUFdSUVp3bzgzUmMwSG1aZUduVjFXaWJtNUMiLCJtYWMiOiI4YjdiYjVlNmNiODY5ODJlNDExMzE1NTY1ODQxNTQ1MDZlMzRiZDUyNDdkMDk2ZDlmMGZiYjYyNjE0OWE5ZWE4IiwidGFnIjoiIn0%3D'},
     ]
 
