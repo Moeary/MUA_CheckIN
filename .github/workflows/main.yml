@@ -24,14 +24,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install selenium
-
-    - name: Download ChromeDriver
-      run: |
-        Invoke-WebRequest -Uri https://chromedriver.storage.googleapis.com/$(Invoke-RestMethod -Uri https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_win32.zip -OutFile chromedriver.zip
-        Expand-Archive chromedriver.zip -DestinationPath $env:USERPROFILE
+        pip install undetected-chromedriver selenium
 
     - name: Run sign-in script
-      env:
-        PATH: $env:USERPROFILE\chromedriver_win32;$env:PATH
       run: python mua.py
