@@ -36,7 +36,7 @@ try:
 
     # 使用显式等待查找签到按钮并检查是否可点击
     wait = WebDriverWait(driver, 20)
-    sign_in_button = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, ".btn.bg-gradient-primary.pl-4.pr-4")))
+    sign_in_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".btn.bg-gradient-primary.pl-4.pr-4")))
 
     # 检查按钮是否可点击
     if sign_in_button.is_enabled():
