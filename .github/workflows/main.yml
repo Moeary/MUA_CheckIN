@@ -28,4 +28,6 @@ jobs:
         pip install undetected-chromedriver selenium
 
     - name: Run sign-in script
+      env:
+        COOKIE: ${{ secrets.COOKIE }}
       run: python mua.py
