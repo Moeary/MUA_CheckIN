@@ -25,7 +25,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install setuptools
-        pip install undetected-chromedriver==3.1.0 selenium  # 指定undetected-chromedriver版本
+        pip install undetected-chromedriver==3.5.5 selenium  # 指定undetected-chromedriver版本
 
     - name: Run sign-in script
       env:
