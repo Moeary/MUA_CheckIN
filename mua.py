@@ -1,4 +1,4 @@
-import undetected_chromedriver.v2 as uc
+import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -10,12 +10,8 @@ import os
 # 设置默认编码为utf-8
 sys.stdout.reconfigure(encoding='utf-8')
 
-# 设置Chrome选项
-options = uc.ChromeOptions()
-options.headless = True  # 设置为无头模式
-
 # 启动浏览器
-driver = uc.Chrome(options=options, version_main=129)  # 指定ChromeDriver主版本号
+driver = uc.Chrome()
 
 try:
     # 打开目标页面
