@@ -11,7 +11,7 @@ import os
 sys.stdout.reconfigure(encoding='utf-8')
 
 # 启动浏览器
-driver = uc.Chrome(version_main=129)  # 指定ChromeDriver主版本号
+driver = uc.Chrome()
 
 
 try:
