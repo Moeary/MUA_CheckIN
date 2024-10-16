@@ -1,17 +1,18 @@
-import undetected_chromedriver.v2 as uc
+import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 import time
 import sys
 import os
-from selenium.common.exceptions import TimeoutException
 
 # 设置默认编码为utf-8
 sys.stdout.reconfigure(encoding='utf-8')
 
 # 启动浏览器
 driver = uc.Chrome(version_main=129)  # 指定ChromeDriver主版本号
+
 
 try:
     # 打开目标页面
@@ -50,6 +51,9 @@ try:
             print("签到按钮不可点击")
     except TimeoutException:
         print("已经签到或按钮不可用")
+    finally:
+        driver.quit()
+
 finally:
     # 关闭浏览器并忽略OSError异常
     try:
