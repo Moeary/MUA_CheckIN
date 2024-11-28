@@ -15,8 +15,7 @@ options = uc.ChromeOptions()
 options.headless = True  # 设置为无头模式
 
 # 启动浏览器
-driver = uc.Chrome(options=options, version_main=129)  # 指定ChromeDriver主版本号
-
+driver = uc.Chrome(options=options, version_main=131)  # 指定ChromeDriver主版本号
 
 try:
     # 打开目标页面
@@ -27,6 +26,10 @@ try:
 
     # 从环境变量读取cookie
     cookie_string = os.getenv('COOKIE')
+    if not cookie_string:
+        print("环境变量 'COOKIE' 未设置")
+        sys.exit(1)
+
     cookies = []
     for cookie in cookie_string.split('; '):
         name, value = cookie.split('=', 1)

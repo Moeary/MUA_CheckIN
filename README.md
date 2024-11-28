@@ -4,6 +4,8 @@
 
 这是一个用于自动签到MUA网站的Python脚本。脚本使用Selenium和undetected-chromedriver来模拟浏览器操作，并通过GitHub Actions定时运行。
 
+**注意,cookie只能保存一个月,到期后需要手动更新cookie!!!**
+
 ## 使用方法
 
 
