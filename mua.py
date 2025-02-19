@@ -15,7 +15,7 @@ options = uc.ChromeOptions()
 options.headless = True  # 设置为无头模式
 
 # 启动浏览器
-driver = uc.Chrome(options=options, version_main=131)  # 指定ChromeDriver主版本号
+driver = uc.Chrome(options=options, version_main=133)  # 指定ChromeDriver主版本号
 
 try:
     # 打开目标页面
